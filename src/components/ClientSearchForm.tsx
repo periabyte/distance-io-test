@@ -31,13 +31,10 @@ const ClientSearchForm: FC = () => {
   useEffect(() => {
     void handleSearch(term);
   }, [term]);
-  
-  console.log('data', results)
 
   return (
     <div className="flex flex-col gap-2">
       <input
-        className="border border-gray-300 rounded p-2"
         type="text"
         placeholder="Search"
         value={term}

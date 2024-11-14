@@ -19,8 +19,6 @@ export const GET = async (request: NextRequest) => {
 
     if (request.nextUrl.searchParams.has("term")) {
         const search = request.nextUrl.searchParams.get("term") as string;
-
-        console.log('search', search)
         
         // Filter the data based on the search query
         // NOTE: This can be done in a more complex way using a fulltext search library, context search, or vector search
