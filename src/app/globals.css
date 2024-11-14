@@ -7,15 +7,50 @@
   --foreground: #171717;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
 
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.code {
+  @apply font-mono text-orange-500;
+}
+
+h1 {
+  @apply text-4xl font-bold text-center;
+}
+
+p {
+  @apply text-lg;
+}
+
+.card {
+  @apply bg-white shadow-md rounded-lg overflow-hidden p-4;
+}
+
+input {
+  @apply h-10 border border-gray-300 rounded-lg p-2;
+}
+
+select {
+  @apply h-10 border border-gray-300 rounded-lg p-2;
+}
+
+.art-container {
+  @apply relative aspect-video overflow-hidden;
+
+}
+
+.art-title-container {
+  @apply bg-[#33333375] w-full p-2 absolute bottom-0 right-0 left-0 z-10 transform translate-y-full group-hover:translate-y-0 transition-transform duration-200
+}
+
+.art-container h2 {
+  @apply text-nowrap text-white text-ellipsis overflow-hidden font-bold
+}
+
+.art-container span {
+  @apply text-nowrap text-white text-ellipsis overflow-hidden text-sm
 }
